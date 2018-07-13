@@ -6,8 +6,8 @@ var p = "!"
 robot.on('ready', () => {
     robot.user.setActivity('Вход в Дискорд аккаунт',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
-    setTimeout(status1, 10000)
-    console.log('ready launched bot...')
+    setTimeout(status1, 20000)
+    console.log('login....')
 });
 
 function status1() {
@@ -19,8 +19,9 @@ function status1() {
 
 
  robot.on('guildMemberAdd', (member) => {
-                                                            member.addRole('459206853822251018')
-                                                        });
+      member.addRole('459206853822251018')
+                                                        
+ });
 
 
 robot.on('message', message => {
@@ -32,6 +33,14 @@ message.channel.send('Pinging...').then(sent => {
   }
 });
 
+robot.on('message', message => {
+                                                            if(message.content.startsWith(p + 'say')) {
+                                                                message.delete()
+                                                                let say = message.content.slice((p + 'say').length);
+                                                                message.channel.send(say);
+                                                                console.log("ко-ко повторюшка")
+                                                            }
+                                                        });
 
 
 robot.login(process.env.BOT_TOKEN);
