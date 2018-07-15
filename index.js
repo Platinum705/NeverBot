@@ -36,6 +36,8 @@ message.channel.send('Pinging...').then(sent => {
 robot.on('message', message => {
             if(message.content.startsWith(p + 'say')) {
                    message.delete()
+		    if(message.author.id !== '405258156063850497')
+return message.reply("Прости, но ты не можешь использовать это!")
                    let say = message.content.slice((p + 'say').length);
                       message.channel.send(say);
                      console.log("ко-ко повторюшка")
