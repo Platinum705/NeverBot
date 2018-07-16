@@ -83,6 +83,21 @@ robot.on("guildDelete", guild => {
 });
 		
 
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'nick')) {
+var mentions1 = message.mentions
+const vtes = message.content.slice(28);
+		if(!message.member.roles.some(r=>["Модератор", "Стример"].includes(r.name)) )
+if(message.author.id !== '292178755760422915')
+			     return message.reply("У тебя мало прав на использование этой команды, дружок!")
+message.delete()
+message.mentions.members.first().setNickname(vtes)
+console.log(vtes) 
+
+    }});
+
+
+
 
 
 robot.login(process.env.BOT_TOKEN);
