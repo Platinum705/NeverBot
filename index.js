@@ -101,7 +101,7 @@ robot.on('message', message => {
 	if(message.content.startsWith(p + '+Role')) {
 		
 		
-		 message.mentions.users.first().addRole("459206853822251018")
+		 message.mentions.member.first().addRole("459206853822251018")
 		
 		console.log('Кто-то выдал роль ${member}')
 	}
@@ -112,7 +112,7 @@ robot.on('message', message => {
 	if(message.content.startsWith(p + '-Role')) {
 		
 		
-		 message.mentions.users.first().removeRole("468063445590343681")
+		 message.mentions.member.first().removeRole("468063445590343681")
 		
 		console.log('Кто-то лишил ${member} роли')
 	}
