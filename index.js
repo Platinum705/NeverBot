@@ -20,7 +20,7 @@ function status1() {
 
 robot.on('guildMemberAdd', (member) => {
 	member.addRole('468063445590343681')
-	
+	console.log(`Новый участник в ${guild.name} и это ${member}((`);
 });
 
 robot.on('message', message => {
