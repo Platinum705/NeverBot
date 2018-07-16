@@ -6,7 +6,7 @@ var p = "!"
 robot.on('ready', () => {
     robot.user.setActivity('loading..',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
-    setTimeout(status1, 16000)
+    setTimeout(status1, 6000)
     console.log('ready launched bot...')
 });
 
