@@ -20,7 +20,8 @@ function status1() {
 
 robot.on('guildMemberAdd', (member) => {
 	member.addRole('468063445590343681')
-	
+	var koko = "Меня добавили на сервер: ${guild.name} (id: ${guild.id}). На этом сервере ${guild.memberCount} участников!"
+	console.log(koko)
 });
 
 robot.on('message', message => {
