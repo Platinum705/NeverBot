@@ -54,18 +54,6 @@ robot.on("guildDelete", guild => {
 });
 
 
-
-robot.on('message', message => {
-	if(message.content.startsWith(p + 'nick')) {
-var mentions1 = message.mentions
-const vtes = message.content.slice(28);
-if(message.author.id !== '405258156063850497')
-			     return message.reply("Прости, но ты не можешь использовать это!")
-message.delete()
-message.mentions.members.first().setNickname(vtes)
-console.log(vtes)
-
-
 		robot.on('message', message => {
     if(message.content.startsWith(p + 'delete')) {
                    if(!message.member.roles.some(r=>["Модератор", "Стример"].includes(r.name)) )
