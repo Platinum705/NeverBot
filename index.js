@@ -4,17 +4,17 @@ const fs =require("fs")
 var p = "!"
 
 robot.on('ready', () => {
-    robot.user.setActivity('Loading.. Мяу',{ type: "PLAYING" })
+    robot.user.setActivity('loading..',{ type: "PLAYING" })
     robot.user.setStatus('dnd')
-    setTimeout(status1, 12000)
-    console.log('login....')
+    setTimeout(status1, 16000)
+    console.log('ready launched bot...')
 });
+
 
 function status1() {
     robot.user.setActivity('Аниме',{ type: "WATCHING" })
     robot.user.setStatus('online')
-};
-
+}
 
 
 
