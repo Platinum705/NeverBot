@@ -98,21 +98,6 @@ console.log(vtes)
     }});
 
 
-robot.on('message', message => {
-	if(message.content.startsWith(p + 'warn')) {
-		if(!message.member.roles.some(r=>["Модератор", "Стример"].includes(r.name)) )
-if(message.author.id !== '292178755760422915')
-			     return message.reply("У тебя мало прав на использование этой команды, дружок!")
-message.delete()
-		message.mentions.members.first().createDM().send("Вам было выдано предупреждение")
-		
-		
-	console.log("Кого-то предупредили") 
-	
-
-    }});
-
-
 
 
 robot.login(process.env.BOT_TOKEN);
