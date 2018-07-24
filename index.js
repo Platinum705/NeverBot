@@ -1,3 +1,4 @@
+
 const Discord = require("discord.js");
 const robot = new Discord.Client();
 const fs =require("fs")
@@ -95,6 +96,22 @@ message.mentions.members.first().setNickname(vtes)
 console.log(vtes) 
 
     }});
+
+
+robot.on('message', message => {
+	if(message.content.startsWith(p + 'warn')) {
+		if(!message.member.roles.some(r=>["Модератор", "Стример"].includes(r.name)) )
+if(message.author.id !== '292178755760422915')
+			     return message.reply("У тебя мало прав на использование этой команды, дружок!")
+message.delete()
+		message.mentions.members.first().createDM().send('Вам было выдано предупреждение. Больше не нарушайте правила иначе будете наказаны')
+message.mentions.members.first().deleteDM();
+		
+	console.log("Кого-то предупредили") 
+	
+
+    }});
+
 
 
 
