@@ -21,7 +21,7 @@ function status1() {
 function status2() {
     robot.user.setActivity('Re:Zero',{ type: "WATCHING" })
     robot.user.setStatus('online')
-	setTimeout(status1, 300000)
+	
 	
 }
 
