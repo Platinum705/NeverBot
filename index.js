@@ -99,7 +99,12 @@ console.log(vtes)
 
     }});
 
-
+robot.on("guildMemberRemove", member => {
+    console.log(`${member.displayName} покинул ${member.guild.name}.`)
+if(member.guild.id === "459053493492121600"){
+robot.channels.get('459211347050102785').send(`${member.displayName} ушел от великого стримера`);
+	}
+});
 
 
 robot.login(process.env.BOT_TOKEN);
