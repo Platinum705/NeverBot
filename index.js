@@ -15,12 +15,13 @@ robot.on('ready', () => {
 function status1() {
     robot.user.setActivity('Аниме',{ type: "WATCHING" })
     robot.user.setStatus('online')
-	setTimeout(status2, 600000)
+	setTimeout(status2, 300000)
 }
 
 function status2() {
-    robot.user.setActivity('как создатель смотрит Re:Zero',{ type: "WATCHING" })
+    robot.user.setActivity('Re:Zero',{ type: "WATCHING" })
     robot.user.setStatus('online')
+	setTimeout(status1, 300000)
 	
 }
 
