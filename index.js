@@ -15,7 +15,7 @@ robot.on('ready', () => {
 function status1() {
     robot.user.setActivity('Аниме',{ type: "WATCHING" })
     robot.user.setStatus('online')
-	setTimeout(status2, 1000000)
+	setTimeout(status2, 10000)
 }
 
 function status2() {
