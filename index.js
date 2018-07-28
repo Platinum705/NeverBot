@@ -13,7 +13,7 @@ robot.on('ready', () => {
 
 
 function status1() {
-    robot.user.setActivity('Re:Zero',{ type: "WATCHING" })
+    robot.user.setActivity('Поиск аниме',{ type: "PLAYING" })
     robot.user.setStatus('online')
 	
 }
