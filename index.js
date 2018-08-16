@@ -158,7 +158,9 @@ function getRandomArbitary(min, max)
 return Math.floor(Math.random() * 1000) + 0
 }
 message.channel.send(randomNumber)
-
+ 
+		    console.log(`${member.displayName} зарандомил число`)
+		    
 }});
 
 robot.login(process.env.BOT_TOKEN);
