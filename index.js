@@ -149,18 +149,17 @@ robot.channels.get('437629164770820099').send(`${member.displayName} покин�
 robot.on('message', message => {
             if(message.content.startsWith(p + 'rand')) {
             message.delete()
-var randomNumber = Math.floor(Math.random() );
+var randomNumber = Math.floor(Math.random() * 1000) + 0;
 		    
 function getRandomArbitary(min, max)
 {
 
 
-return Math.floor(Math.random() * 100) + 0
+return Math.floor(Math.random() * 1000) + 0
 }
 message.channel.send(randomNumber)
 
 }});
-
 
 robot.login(process.env.BOT_TOKEN);
 
