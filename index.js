@@ -159,7 +159,7 @@ return Math.floor(Math.random() * 1000) + 0
 }
 message.channel.send(randomNumber)
  
-		    console.log("один из участников зарандомил число")
+		    
 		    
 }});
 
