@@ -175,6 +175,15 @@ if(message.content == "!ивент"){
  }
 }});
 */
+robot.on('message', message => {
+  if (message.content === (p + 'event')) {
+message.channel.send("@everyone, доброго времени суток, до мирового босса осталось 10 минут");
+	setInterval(function() {
+		
+	  
+    }, 5000)  
+  }
+});
 
 robot.login(process.env.BOT_TOKEN);
 
