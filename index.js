@@ -163,6 +163,18 @@ message.channel.send(randomNumber)
 		    
 }});
 
+if(message.content == "!ивент"){
+
+     setInterval(function() {
+
+     message.channel.send("@everyone, доброго времени суток, до мирового босса осталось 10 минут");
+
+   }, 1000)  
+
+ }
+
+
+
 robot.login(process.env.BOT_TOKEN);
 
 
