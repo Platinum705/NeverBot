@@ -162,7 +162,7 @@ message.channel.send(randomNumber)
 		    
 		    
 }});
-
+robot.on('message', message => {
 if(message.content == "!ивент"){
 
      setInterval(function() {
@@ -171,8 +171,8 @@ if(message.content == "!ивент"){
 
    }, 1000)  
 
- }
-
+ }
+}});
 
 
 robot.login(process.env.BOT_TOKEN);
