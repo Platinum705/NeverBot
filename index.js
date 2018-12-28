@@ -117,26 +117,26 @@ robot.channels.get('459211347050102785').send(`Приветствуем ново
 
 robot.on('message', message => {
     if(message.content.startsWith(p + 'help')) {
-	message.channel.send('К командам бота обращаться к @Ролтон Тян#0207')
+	message.channel.send('К командам бота обращаться к Чайку')
 	    console.log(`${message.author.displayName} прописал команду help`)
         };
 });
 
-
-
 robot.on("messageDelete", (msg) => {
   if (typeof msg.content !== 'undefined'){
-    var date = new Date(msg.timestamp);
+    var date = new Date(msg.createdTimestamp);
     if (typeof msg.attachments[0] !== 'undefined'){
 	console.log('Кинул в лс удаленное сообщение')
-      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
+      robot.users.get("292178755760422915").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
     } else {
-      robot.users.get("405258156063850497").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
+      robot.users.get("292178755760422915").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
     };
   } else {
-    robot.users.get("405258156063850497").send("Удалено сообщение.");
+    robot.users.get("292178755760422915").send("Удалено сообщение.");
   };
 });
+
+
 
 robot.on("guildMemberRemove", member => {
     console.log(`${member.displayName} покинул ${member.guild.name}.`)
