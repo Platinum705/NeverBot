@@ -182,9 +182,9 @@ message.channel.send("@everyone, доброго времени суток, до 
 	setInterval(function() {
 		message.channel.send("@everyone, доброго времени суток, до мирового босса осталось 10 минут");
 		
-		}, 10000)
+		}, 86400000)
 	  
-		    //86400000
+		    //86400000(24 часа)
   }
 });
 
