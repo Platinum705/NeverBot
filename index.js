@@ -162,9 +162,10 @@ message.channel.send("@everyone, доброго времени суток, до 
 
 robot.on('message', message => {
   if (message.content === (p + 'clear')) {
+	  message.reply('Отключил оповещения');
 setTimeout(function() {
   clearInterval(tclear);
- message.channel.send(`${message.author} отключил оповещения`);
+ 
 }, 5000);
 	  
   }
