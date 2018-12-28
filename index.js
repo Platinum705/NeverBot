@@ -13,7 +13,7 @@ robot.on('ready', () => {
 
 
 function status1() {
-    robot.user.setActivity('Поиск аниме',{ type: "PLAYING" })
+    robot.user.setActivity('dragon nest mobile',{ type: "PLAYING" })
     robot.user.setStatus('online')
 	
 }
@@ -122,21 +122,6 @@ robot.on('message', message => {
         };
 });
 
-robot.on("messageDelete", (msg) => {
-  if (typeof msg.content !== 'undefined'){
-    var date = new Date(msg.createdTimestamp);
-    if (typeof msg.attachments[0] !== 'undefined'){
-	console.log('Кинул в лс удаленное сообщение')
-      robot.users.get("292178755760422915").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}". К сообщению было что-то прикреплено.`);
-    } else {
-      robot.users.get("292178755760422915").send(`Удалено сообщение от ${msg.author.username}, написанное ${date.toUTCString()}: "${msg.content}".`);
-    };
-  } else {
-    robot.users.get("292178755760422915").send("Удалено сообщение.");
-  };
-});
-
-
 
 robot.on("guildMemberRemove", member => {
     console.log(`${member.displayName} покинул ${member.guild.name}.`)
@@ -162,19 +147,7 @@ message.channel.send(randomNumber)
 		    
 		    
 }});
-/*
-//robot.on('message', message => {
-if(message.content == "!ивент"){
 
-     setInterval(function() {
-
-     message.channel.send("@everyone, доброго времени суток, до мирового босса осталось 10 минут");
-
-   }, 1000)  
-
- }
-}});
-*/
 robot.on('message', message => {
   if (message.content === (p + 'start')) {
 	  
@@ -188,19 +161,7 @@ message.channel.send("@everyone, доброго времени суток, до 
   }
 });
 
-robot.on('message', msg => {
-    if (msg.content === (p + 'монетка')) {
-        var coin = Math.floor(Math.random() * 2) + 1  
-	msg.delete()
-    if(coin == 1){
-        msg.reply('Тебе выпала ***Решка!***')
-    }
-    if(coin == 2){
-        msg.reply('Тебе выпал ***Орел!*** 🦅')
-	    }
-	
-    }
-})
+
 robot.login(process.env.BOT_TOKEN);
 
 
