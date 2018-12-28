@@ -147,6 +147,7 @@ message.channel.send(randomNumber)
 		    
 		    
 }});
+//Запускает интервал
 robot.on('message', message => {
   if (message.content === (p + 'start')) {
 	  
@@ -154,12 +155,12 @@ message.channel.send("@everyone, доброго времени суток, до 
 	var tclear = setInterval(function() {
 		message.channel.send("@everyone, доброго времени суток, до мирового босса осталось 10 минут");
 		
-		}, 10000)
+		}, 86400000)
 	  
 		    //86400000(24 часа)
   }
 }); 
-
+//Удалит интервал сверху 
 robot.on('message', message => {
   if (message.content === (p + 'clear')) {
 	  message.reply('Отключил оповещения');
