@@ -152,7 +152,8 @@ robot.on('message', message => {
   if (message.content === (p + 'start')) {
 	  
 message.channel.send("@everyone, доброго времени суток, до мирового босса осталось 10 минут");
-	var tclear = setInterval(function() {
+	//var tclear = 
+	    setInterval(function() {
 		message.channel.send("@everyone, доброго времени суток, до мирового босса осталось 10 минут");
 		
 		}, 86400000)
