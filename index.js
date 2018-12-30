@@ -160,7 +160,7 @@ message.channel.send("@everyone, доброго времени суток, до 
 	
 	} catch (err) {
 message.channel.send('Произошла ошибка')
-	
+	console.log("Поймал маслину")
 	}
 		    //86400000(24 часа)
     }
