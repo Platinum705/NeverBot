@@ -150,16 +150,20 @@ message.channel.send(randomNumber)
 //Запускает интервал
 robot.on('message', message => {
   if (message.content === (p + 'start')) {
-	  
+try {	  
 message.channel.send("@everyone, доброго времени суток, до мирового босса осталось 10 минут");
 	//var tclear = 
 	    setInterval(function() {
 		message.channel.send("@everyone, доброго времени суток, до мирового босса осталось 10 минут");
 		
 		}, 86400000)
-	  
+	
+	} catch (err) {
+message.channel.send('Произошла ошибка')
+	
+	}
 		    //86400000(24 часа)
-  }
+    }
 }); 
 //Удалит интервал сверху 
 robot.on('message', message => {
